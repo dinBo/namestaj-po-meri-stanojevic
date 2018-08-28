@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './components/Layout/Layout';
-import Slideshow from './components/Slajder/Slajder';
+import HomePage from './containers/HomePage/HomePage';
 
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <p>Glavno</p>
+          <HomePage />
         </Layout>
       </div>
     );

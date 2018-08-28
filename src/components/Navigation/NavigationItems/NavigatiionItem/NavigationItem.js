@@ -1,7 +1,10 @@
 import React from 'react';
+import classes from './NavigationItem.css';
 
-const NavItem = () => (
-    <li></li>
+const NavItem = (props) => (
+    <li className={classes.NavigationItem}>
+        <a href={props.link}>{props.children}</a>
+    </li>
 );
 
 export default NavItem;

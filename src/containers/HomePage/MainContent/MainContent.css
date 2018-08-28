@@ -1,0 +1,56 @@
+.MainContent{
+    padding-top: 220px;
+    text-align: center;
+   
+}
+
+
+.MainContent p{
+    text-align: center;
+    color: #15021C;
+    font-size: 40px;
+    margin-top: 12px; 
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 4px #413D3B;
+   
+  
+}
+
+.Transbox{
+    width: 75%;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px  solid #350A2C;
+    opacity: 0.6;
+    border-radius: 3px;
+    /* filter: alpha(opacity=60); */
+    box-shadow: 2px 1.5px #6D2C7F;
+
+   
+}
+
+.MainContent button {
+    text-align: center;
+    
+    background-color: #7c3599;
+    color: white;
+    margin-top: 75px; 
+    width: 250px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 30px;
+    
+    border: 3px #FFFFFF;
+    border-radius: 5px;
+    
+    opacity: 1;
+    box-shadow: 2px 2px 2px 2px  #FFFFFF;
+} 
+
+.MainContent button:hover {
+    background-color: #170219;
+    color: white;
+    opacity: 0.88;
+    box-shadow: 1.5px 2px #948B98;
+}
+
