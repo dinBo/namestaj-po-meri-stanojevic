@@ -17,6 +17,9 @@ const modal = (props) => {
         case 'register':
             contentType = <Register />;
             break;
+        case 'galleryItem':
+            contentType = props.content;
+            break;
         default:
             contentType = null;
     }

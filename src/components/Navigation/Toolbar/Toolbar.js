@@ -11,12 +11,12 @@ class Toolbar extends Component {
     state = {
         loggedIn: false,
         showModal: false,
-        modalContent: null
+        modalContentType: null
     }
 
     showModalHandler = (prop) => {
         console.log('showModal rerendered')
-        this.setState({showModal: true, modalContent: prop});
+        this.setState({showModal: true, modalContentType: prop});
     }
 
     hideModalHandler = () => {
@@ -51,7 +51,7 @@ class Toolbar extends Component {
                 <Modal
                     show={this.state.showModal}
                     hide={this.hideModalHandler}
-                    type={this.state.modalContent}
+                    type={this.state.modalContentType}
                     loggedIn={this.state.loggedIn}
                     login={this.loginUserHandler}
                     logout={this.logoutUserHandler}
