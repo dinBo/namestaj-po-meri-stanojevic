@@ -19,5 +19,15 @@
     padding-left: 30px;
     font-weight: bold;
     font-size: 18px;
+    font-family: 'Cambria';
    
 }
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    color: rgb(147, 95, 153);
+    text-decoration: underline;
+    cursor: pointer;
+}
+

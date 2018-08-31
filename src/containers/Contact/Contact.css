@@ -1,0 +1,15 @@
+.Contact{
+    padding-top: 105px; 
+    text-align: center;
+    font-family: 'Cambria';
+    background-color: rgb(245, 239, 245);
+    color:  #7c3599;
+    padding-bottom: 37px;
+    /* padding-left: 100px; */
+    text-shadow: 0.5px 0.5px  rgb(173, 80, 138);
+    
+}
+
+.Contact p {
+    margin-bottom: 0;
+}

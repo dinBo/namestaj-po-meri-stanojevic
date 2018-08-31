@@ -1,21 +1,36 @@
 import React from 'react';
 
-import Aux from '../../../Aux';
+import Aux from '../../../hoc/_Aux';
 import Backdrop from '../Backdrop/Backdrop';
 import classes from './Modal.css';
+import Login from '../../UI/Form/Login/Login';
+import Register from '../../UI/Form/Register/Register';
 
-const modal = (props) => (
-    <Aux>
-        <Backdrop />
-        <div
-            className={classes.Modal}
-            style={{
-                transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
-                opacity: props.show ? '1' : '0'
-            }}>
-            {props.children}
-        </div>
-    </Aux>
-);
+const modal = (props) => {
+    
+    let contentType = null;
+
+    switch(props.type) {
+        case 'login':
+            contentType = <Login />;
+            break;
+        case 'register':
+            contentType = <Register />;
+            break;
+        default:
+            contentType = null;
+    }
+
+    return(
+        <Aux>
+            <Backdrop show={props.show} hideModal={props.hide}/>
+            <div
+                className={classes.Modal}
+                style={{ display: props.show ? 'block' : 'none' }}>
+                { contentType }
+            </div>
+        </Aux>
+    )
+};
 
 export default modal;

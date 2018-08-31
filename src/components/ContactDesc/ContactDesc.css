@@ -1,0 +1,50 @@
+.ContactDesc{
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Cambria';
+    background-color: rgb(245, 239, 245);
+    color: rgb(58, 16, 54);
+    margin-bottom: 30px;
+}
+.Column h{
+    margin-bottom: 20px;
+}
+
+.Form{
+    text-align: center;
+    color: #7c3599;
+    font-size: 20px;
+    margin-bottom: 15px;
+  
+}
+.Column p{
+    padding-left: 25px;
+    margin-bottom: 45px;
+    color: #7c3599;
+    font-size: 20px;
+
+}
+
+.Column ul{
+    margin-bottom: 45px;
+    color: #7c3599;
+    font-size: 20px;
+
+
+}
+
+.Form label, input, textarea{
+ margin-bottom: 20px;
+}
+
+.Form button{
+    color: white;
+    background-color: rgb(58, 16, 54); 
+    padding: 12px 35px;
+    font-size: 17px;
+}

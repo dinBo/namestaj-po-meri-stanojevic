@@ -1,0 +1,17 @@
+.Footer{
+    /* margin-top: -20px;  */
+    height: 80px;
+    background-color: rgb(25, 7, 43);
+    display: flex;
+    justify-content: space-between;
+    color: rgb(184, 179, 179);
+    text-decoration: underline;
+    font-size: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+}
+
+.Footer span{
+    font-weight: bold;
+}

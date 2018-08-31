@@ -3,6 +3,7 @@ import Aux from '../../hoc/_Aux';
 import MainContent from './MainContent/MainContent';
 import ProductsDesc from '../../components/ProductsDesc/ProductsDesc';
 import Products from './Products/Products';
+import Footer from '../../components/Footer/Footer';
 
 class HomePage extends Component{
 
@@ -14,7 +15,8 @@ class HomePage extends Component{
                
               <MainContent />
               <ProductsDesc />
-               <Products /> 
+               <Products />
+               {/* <Footer />  */}
             </Aux>
         );
     }

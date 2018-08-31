@@ -1,0 +1,36 @@
+.Product{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    color: #1f0917;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.Product :hover {
+color: black;
+cursor: pointer;
+/* transform: scale(1.1); */
+
+}
+
+.Product p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px 2px #1f0917 inset;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.Product img {
+    opacity: 0.75;
+}
+
+.Product img:hover{
+    opacity: 1;
+}
