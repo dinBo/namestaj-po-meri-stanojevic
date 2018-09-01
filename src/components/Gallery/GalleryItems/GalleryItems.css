@@ -1,4 +1,27 @@
 .GalleryItems {
-    padding-left: 100px;
-    padding-right: 200px;
+     /* padding-left: 50px;
+    padding-right: 50px;
+    width: 90%;  */
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 10px;
+    background-color: rgb(245, 239, 245);
+}
+
+.GalleryItems h2{
+    text-align: center;
+    color:rgb(107, 9, 9);
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-top: 20px;
+    /* margin-bottom: 30px; */
+}
+
+.Wrapper {
+    height: fit-content;
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
 }

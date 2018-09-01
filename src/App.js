@@ -16,8 +16,25 @@ class App extends Component {
           <Switch>
             <Route path="/contact" component={Contact} />
             <Route path="/about-us" component={AboutUs} />
+            <Route path="/home" component={HomePage} />
+
+            <Route path="/kuhinje" exact render={
+
+              () => <Gallery name="Kuhinje po meri" 
+              desc="Kuhinje po meri su okosnica naše celokupne proizvodnje i jedan od najvećih ponosa naše dizajnerske i proizvodne ekipe.
+              Kupovina gotovih kuhinjskih elemenata je stvar prošlosti.
+              
+              Moderno doba i nova arhitektonska i estetska rešenja u stambenim i drugim prostorima, danas zahtevaju mnogo veći obim dinamike i prilagođavanja svim tipovima prostora.
+              
+              Masovna izgradnja stambenih celina čini da se one u velikoj meri grade prema šablonu, u kome se sve stvari uklapaju u jedno te isto sivilo.
+              
+              Ono što Vi možete učiniti da biste Vaš dom učinili funkcionalnijim i da biste omogucili da se ističe u odnosu na druge, jeste izrada moderne i unikatne kuhinje po meri."
+              url="http://www.crvenajabuka.co.rs/wp-content/uploads/2014/06/kuhinje-po-meri-primer-final.jpg" alt="kuhinje"
+              />
+
+            } />
+
             <Route path="/" exact component={HomePage} />
-            <Route path="/kitchen" exact component={Gallery} />
 
           </Switch>
 

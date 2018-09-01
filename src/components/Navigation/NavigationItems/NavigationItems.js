@@ -5,8 +5,8 @@ import NavigationItem from './NavigatiionItem/NavigationItem';
 import Aux from '../../../hoc/_Aux';
 
 const navigationItems = [
-    { label: 'Pocetna', link: '/' },
-    { label: 'Proizvodi', link: '/proizvodi' },
+    { label: 'Pocetna', link: '/home' },
+    { label: 'Proizvodi', link: '/home#products' },
     { label: 'O nama', link: '/about-us' },
     { label: 'Kontakt', link: '/contact' }
 ];

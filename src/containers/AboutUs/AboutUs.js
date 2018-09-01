@@ -7,8 +7,14 @@ import Footer from '../../components/Footer/Footer';
 class AboutUs extends Component {
 
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+
     render() {
 
+        
         return (
             <Aux>
                 <div className={classes.AboutUs}>

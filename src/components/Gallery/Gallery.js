@@ -17,35 +17,45 @@ class Gallery extends Component {
         console.log('Klik na showModalHandler!!!');
         console.log(event.target);
 
-        let formatedModalContent = /*<div style={{height:'500px', width:'300px'}}>*/<img src={event.target.src} alt={event.target.alt}/>/*</div>*/
+        let formatedModalContent = /*<div style={{height:'500px', width:'300px'}}>*/<img src={event.target.src} alt={event.target.alt} />/*</div>*/
         console.log(formatedModalContent);
-        
-        this.setState({showModal: true, modalContent: formatedModalContent, modalContentType: 'galleryItem'});
+
+        this.setState({ showModal: true, modalContent: formatedModalContent, modalContentType: 'galleryItem' });
     }
 
     hideModalHandler = () => {
-        this.setState({showModal: false});
+        this.setState({ showModal: false });
     }
 
-    render() {
-        return(
-            <div className={classes.Gallery}>
-                <div><h2>Naslov</h2>
-                    <p>Firebase Remote Config can be a powerful and easy way to make changes in your
-                        app, discover what resonates with your audience, and then quickly revert
-                        those changes if needed. Previously, if you wanted to remember what values
-                        you used in the past and how they changed over time, you had to keep track
-                        of them manually. In one-person teams, this is a hassle.
-                        But for large teams, where lots of different developers could be changing
-                        the project's Remote Config values at once, this is a major headache.</p></div>
-                <div>SLIKA</div>
 
-                <GalleryItems show={this.showModalHandler}/>
-                <Modal 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+
+    render() {
+        return (
+            <div className={classes.Gallery}>
+
+            <div className={classes.MainContent}>
+
+            <div className={classes.Description}><h1>{this.props.name}</h1>
+                    <p>{this.props.desc}</p></div>
+                <div className={classes.Picture}><img src={this.props.url} alt={this.props.alt} />
+                </div>
+
+
+            </div>
+                
+
+                <GalleryItems show={this.showModalHandler} />
+
+                
+                <Modal
                     show={this.state.showModal}
                     hide={this.hideModalHandler}
                     content={this.state.modalContent}
-                    type={this.state.modalContentType}/>
+                    type={this.state.modalContentType} />
 
             </div>
         );

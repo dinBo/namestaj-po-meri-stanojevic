@@ -15,16 +15,16 @@ class Products extends Component{
 
 state = {
     productsRow1: [
-        {name: 'KUHINJE', image: Kuhinje, alt: 'Kuhinje', link: "/kitchen"},
-        {name: 'ORMARI', image: Ormari, alt: 'Ormari', link: "/kitchen"},
-        {name: 'PLAKARI', image: Plakari, alt: 'Plakari', link: "/kitchen"}
+        {name: 'KUHINJE', image: Kuhinje, alt: 'Kuhinje', link: "/kuhinje"},
+        {name: 'ORMARI', image: Ormari, alt: 'Ormari', link: "/ormari"},
+        {name: 'PLAKARI', image: Plakari, alt: 'Plakari', link: "/plakari"}
 
     ],
     productsRow2: [
        
-        {name: 'KREVETI', image: Kreveti, alt: 'Kreveti', link: "/kitchen"},
-        {name: 'TV KOMODE', image: TVkomode, alt: 'TVkomode', link: "/kitchen"},
-        {name: 'PREDLOZI DIZAJNA', image: PredloziDizajna, alt: 'PredloziDizajna', link: "/kitchen"}
+        {name: 'KREVETI', image: Kreveti, alt: 'Kreveti', link: "/kreveti"},
+        {name: 'TV KOMODE', image: TVkomode, alt: 'TVkomode', link: "/tv-komode"},
+        {name: 'PREDLOZI DIZAJNA', image: PredloziDizajna, alt: 'PredloziDizajna', link: "/predlozi-dizajna"}
 
     ]
 }
@@ -35,7 +35,7 @@ state = {
             <div className={classes.Products}>
             <hr></hr>
             <h1> N&nbsp;A&nbsp;Š&nbsp;&nbsp; P&nbsp;O&nbsp;R&nbsp;T&nbsp;F&nbsp;O&nbsp;L&nbsp;I&nbsp;O&nbsp;&nbsp; P&nbsp;R&nbsp;O&nbsp;I&nbsp;Z&nbsp;V&nbsp;O&nbsp;D&nbsp;A</h1>
-           
+
            
 
 
