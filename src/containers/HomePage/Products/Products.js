@@ -6,7 +6,7 @@ import Ormari from '../../../assets/images/ormari.jpg';
 import Plakari from '../../../assets/images/plakari.jpg';
 import Kreveti from '../../../assets/images/kreveti.jpg';
 import TVkomode from '../../../assets/images/komode.jpg';
-import PredloziDizajna from '../../../assets/images/predlozi.jpg';
+import Kupatila from '../../../assets/images/kupatila.jpg';
 
 
 
@@ -23,8 +23,8 @@ state = {
     productsRow2: [
        
         {name: 'KREVETI', image: Kreveti, alt: 'Kreveti', link: "/kreveti"},
-        {name: 'TV KOMODE', image: TVkomode, alt: 'TVkomode', link: "/tv-komode"},
-        {name: 'PREDLOZI DIZAJNA', image: PredloziDizajna, alt: 'PredloziDizajna', link: "/predlozi-dizajna"}
+        {name: 'KOMODE', image: TVkomode, alt: 'TVkomode', link: "/tv-komode"},
+        {name: 'KUPATILA', image: Kupatila, alt: 'Kupatila', link: "/kupatila"}
 
     ]
 }

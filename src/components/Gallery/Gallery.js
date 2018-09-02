@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GalleryItems from './GalleryItems/GalleryItems';
 import Modal from '../UI/Modal/Modal';
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 import classes from './Gallery.css';
 
@@ -9,7 +11,8 @@ class Gallery extends Component {
     state = {
         showModal: false,
         modalContent: null,
-        modalContentType: null
+        modalContentType: null,
+        items: []
     }
 
     showModalHandler = event => {
@@ -29,11 +32,23 @@ class Gallery extends Component {
 
 
     componentDidMount() {
+        console.log("props:");
+        console.log(this.props);
+       
         window.scrollTo(0, 0);
+        this.loadProducts();
+    }
+
+    loadProducts = () => {
+        axios.get('https://namestaj-po-meri-project.firebaseio.com/products/'+this.props.link +'.json')
+            .then(response => {
+                this.setState({ingredients: response.data});
+            });
     }
 
 
     render() {
+       
         return (
             <div className={classes.Gallery}>
 
@@ -48,7 +63,7 @@ class Gallery extends Component {
             </div>
                 
 
-                <GalleryItems show={this.showModalHandler} />
+                <GalleryItems items={this.state.ingredients} show={this.showModalHandler} />
 
                 
                 <Modal
@@ -63,4 +78,4 @@ class Gallery extends Component {
 }
 
 
-export default Gallery;
+export default withRouter(Gallery);

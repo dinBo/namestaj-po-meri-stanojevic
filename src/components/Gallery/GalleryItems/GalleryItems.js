@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import GalleryItem from './GalleryItem/GalleryItem';
 
 import classes from './GalleryItems.css';
 
-const items = [
+/*const items = [
     {imageURL: 'https://www.god.co.rs/upload/images/zoom/kuhinje_po_meri_dj_031.jpg', price: '90.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
     {imageURL: 'http://namestajpovasojmeri.com/wp-content/uploads/2012/04/zelenakuhinja.jpg', price: '75.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
     {imageURL: 'http://www.sveosvemu.com/wp-content/uploads/tdomf/15353/kuhinja.jpg', price: '77.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
@@ -17,22 +17,53 @@ const items = [
     {imageURL: 'https://www.mojenterijer.rs/image.php/matis-kuhinje-kuhinje-po-meri-namestaj%20(32).jpg?width=600&height=400&cropratio=3:2&cropposition=&image=https://www.mojenterijer.rs/chest/top/matis-kuhinje-vec-od-18000-din/matis-kuhinje-kuhinje-po-meri-namestaj%20(32).jpg', price: '43.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
     {imageURL: 'http://www.kuhinje-americkiplakari.com/galerija/kuhinje/126.jpg', price: '120.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
     {imageURL: 'http://4.bp.blogspot.com/-U7C9zLKzB04/UiJtPEPl8ZI/AAAAAAAAAK4/mvkaWp1h3tk/s1600/kuhinja_po_meri.jpg', price: '95.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
-    {imageURL: 'http://kuhinje-pomeri.com/wp-content/uploads/2016/04/kuhinje.jpg', price: '100.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
-    {imageURL: 'https://www.navidiku.rs/firme/proizvodgalerija/galerija11273/velike/kuhinje-po-meri-1---enterijer-pavlovic.jpg', price: '63.000', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
-]
+    {imageURL: 'h.ttp://kuhinje-pomeri.com/wp-content/uploads/6/04/kuhinje.jpg201', price: '100.000,00', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
+    {imageURL/wwwnavidiku.rs/firme/proizvodgalerija/galerija11273/velike/kuhinje-po-meri-1---enterijer-pavlovic.jpg', price: '63.000', alt:'', desc:"Kuhinja pravljena od medijapana, jun 2018, vršimo ugradnju nakon kupovine. "},
+]*/
 
-const GalleryItems = props => (
+class GalleryItems extends Component {
+
+    render(){
+
+        let items = null;
+
+        if (this.props.items) {
+            console.log(this.props.items);
+            items = this.props.items.map(item => {
+                console.log(item);
+                return <GalleryItem 
+                    click={this.props.show}
+                    url={item.imageURL}
+                    alt={item.alt}
+                    desc={item.desc}
+                    price={item.price}/>
+            });
+        }
+
+        return(
+            <div className={classes.Wrapper}>
+                <div className={classes.GalleryItems}>
+                    <h2 >Naša online ponuda</h2>
+                    {items}
+                </div>
+            </div>
+        );
+    }
+
+}
+
+/*const GalleryItems = props => (
     <div className={classes.Wrapper}>
     <div className={classes.GalleryItems}>
     <h2 >Naša online ponuda</h2>
-       {items.map(item => {
+       {props.items ? props.items.map(item => {
            return <GalleryItem click={props.show} url={item.imageURL} alt={item.alt} desc={item.desc} price={item.price}/>
-       })}
+       }) : null}
         
 
     </div>
     </div>
 
-);
+);*/
 
 export default GalleryItems;

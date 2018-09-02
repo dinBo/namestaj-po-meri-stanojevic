@@ -17,10 +17,15 @@ div.gallery img {
     height: 200px;
 }
 
+.gallery img:hover{
+cursor: pointer;
+}
+
 button{
     background-color: #7c3599;
     color: white;
     padding: 10px 20px;
+    cursor: pointer;
 }
 .gallery p{
     margin-top: 5px;
