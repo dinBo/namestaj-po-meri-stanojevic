@@ -3,12 +3,13 @@ import classes from './NavigationItems.css';
 import itemClasses from '../NavigationItems/NavigatiionItem/NavigationItem.css';
 import NavigationItem from './NavigatiionItem/NavigationItem';
 import Aux from '../../../hoc/_Aux';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const navigationItems = [
-    { label: 'Pocetna', link: '/home' },
-    { label: 'Proizvodi', link: '/home#products' },
-    { label: 'O nama', link: '/about-us' },
-    { label: 'Kontakt', link: '/contact' }
+    { label: 'Pocetna', link: '/', hash: '#top' },
+    { label: 'Proizvodi', link: '/', hash: '#products' },
+    { label: 'O nama', link: '/about-us', hash: '' },
+    { label: 'Kontakt', link: '/contact', hash: '' }
 ];
 
 const NavItems = props => {
@@ -42,7 +43,7 @@ const NavItems = props => {
     return(
         <ul className={classes.NavigationItems}>
             { navigationItems.map( item => (
-                <NavigationItem link={item.link}>{item.label}</NavigationItem>
+                <AnchorLink href={item.hash}><NavigationItem link={item.link}>{item.label}</NavigationItem></AnchorLink>
             )) }
             { sessionItems }
         </ul>

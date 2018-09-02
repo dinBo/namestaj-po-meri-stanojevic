@@ -3,7 +3,6 @@ import Aux from '../../hoc/_Aux';
 import MainContent from './MainContent/MainContent';
 import ProductsDesc from '../../components/ProductsDesc/ProductsDesc';
 import Products from './Products/Products';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Footer from '../../components/Footer/Footer';
 
@@ -22,17 +21,19 @@ class HomePage extends Component {
 
 
     render() {
-       
+
 
 
         return (
             <Aux>
 
-                <MainContent />
+                <section id='top'>
+                    <MainContent />
+                </section>
                 <ProductsDesc />
-                 <ScrollableAnchor id={'products'}> 
+                <section id='products'>
                     <Products />
-                 </ScrollableAnchor> 
+                </section>
 
                 {/* <Footer />  */}
             </Aux>
